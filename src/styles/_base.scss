@@ -1,0 +1,81 @@
+@import './utils/vars';
+@import './utils/mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  color: $color-black;
+
+  background-color: $color-white;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+
+  @include mq($bp-tablet) {
+    padding: 0 40px;
+  }
+}
+
+.main {
+  overflow-x: hidden;
+  flex: 1;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 32px;
+  border: 2px solid $color-black;
+
+  font-weight: 700;
+  color: $color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: $color-black;
+
+  @include transition;
+
+  &:hover {
+    color: $color-black;
+    background-color: transparent;
+  }
+
+  &--outline {
+    color: $color-black;
+    background-color: transparent;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+}

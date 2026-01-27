@@ -1,0 +1,123 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $color-gray-light;
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+    padding: 120px $gutter 60px;
+
+    color: $color-white;
+
+    background-color: $color-black;
+
+    @include mq($bp-tablet) {
+      padding-left: 100px;
+    }
+  }
+
+  &__content {
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    color: rgba($color-white, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 3rem;
+
+    @include mq($bp-desktop) {
+      font-size: 5rem;
+    }
+  }
+
+  &__cta {
+    border-color: $color-white;
+    color: $color-white;
+
+    &:hover {
+      color: $color-black;
+      background-color: $color-white;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50vh;
+
+    @include mq($bp-desktop) {
+      top: 20%;
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+.slider {
+  &__slides {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    background-color: $color-black;
+  }
+
+  &__button {
+    touch-action: manipulation;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba($color-white, 0.2);
+
+    background: $color-black;
+
+    @include transition;
+
+    &:hover {
+      background-color: $color-white;
+
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+}

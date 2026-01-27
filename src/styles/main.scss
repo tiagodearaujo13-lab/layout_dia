@@ -1,7 +1,25 @@
-@import 'utils';
-@import 'fonts';
+// 1. Utils
+@import 'utils/vars';
+@import 'utils/mixins';
+
+// 2. Base
+@import 'base';
 @import 'typography';
 
-body {
-  background: $c-gray;
+// 3. Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// 4. Components
+@import 'components/hero';
+@import 'components/about';
+@import 'components/expertise';
+@import 'components/process';
+@import 'components/testimonials';
+@import 'components/vision';
+@import 'components/forms';
+
+.section--dark {
+  color: $color-white;
+  background-color: $color-black;
 }

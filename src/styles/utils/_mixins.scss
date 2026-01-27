@@ -1,6 +1,36 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin mq($width, $type: min) {
+  @if $type == max {
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $width) {
+      @content;
+    }
   }
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $prop $time $ease;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  clip: rect(0, 0, 0, 0);
 }

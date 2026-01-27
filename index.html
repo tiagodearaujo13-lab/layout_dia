@@ -6,14 +6,637 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dia</title>
+    <title>Ar</title>
+    <link
+      rel="icon"
+      href="./src/images/logo/dia-logo.svg"
+      type="image/svg+xml"
+    />
+
     <link
       rel="stylesheet"
-      href="src/styles/main.scss"
+      href="./src/styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Dia</h1>
-    <script src="src/scripts/main.js"></script>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <a
+          href="#"
+          class="header__logo-link"
+        >
+          <img
+            src="./src/images/logo/dia-logo.svg"
+            alt="Dia Logo"
+            class="header__logo"
+          />
+        </a>
+
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#hero"
+                class="nav__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about"
+                class="nav__link"
+              >
+                Who we are
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#expertise"
+                class="nav__link"
+              >
+                Our expertise
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#process"
+                class="nav__link"
+              >
+                Process
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#testimonials"
+                class="nav__link"
+              >
+                Testimonials
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact"
+                class="nav__link"
+              >
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-toggle__icon"></span>
+          </button>
+
+          <a
+            href="#contact"
+            class="button header__button"
+          >
+            Hire us
+          </a>
+        </div>
+
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-label="Open menu"
+        >
+          <span class="header__menu-icon"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section
+        class="hero"
+        id="hero"
+      >
+        <div class="hero__container">
+          <div class="hero__content">
+            <p class="hero__subtitle">Strategic agency</p>
+            <h1 class="hero__title">
+              We create
+              <br />
+              unique digital
+              <br />
+              experiences
+            </h1>
+            <a
+              href="#expertise"
+              class="button button--outline hero__cta"
+            >
+              Learn More
+            </a>
+          </div>
+
+          <div class="hero__slider slider">
+            <div class="slider__slides">
+              <div class="slider__slide is-active">
+                <img
+                  src="./src/images/slider/slide-img-1.jpg"
+                  alt="Modern architecture"
+                  class="slider__image"
+                />
+              </div>
+            </div>
+
+            <div class="slider__controls">
+              <button
+                class="slider__button slider__button--prev"
+                aria-label="Previous slide"
+              >
+                <img
+                  src="./src/images/slider/arrow-left.svg"
+                  alt="Left"
+                />
+              </button>
+              <button
+                class="slider__button slider__button--next"
+                aria-label="Next slide"
+              >
+                <img
+                  src="./src/images/slider/arrow-right.svg"
+                  alt="Right"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="about section"
+        id="about"
+      >
+        <div class="container about__container">
+          <div class="about__content">
+            <h2 class="section-title about__title">Who we are</h2>
+            <div class="about__text-wrapper">
+              <p class="text about__text">
+                We are a team of creative minds dedicated to creating the best
+                digital experiences for your business. We combine strategy,
+                design, and technology to solve problems and bring ideas to
+                life.
+              </p>
+              <p class="text about__text">
+                Our passion is to help brands grow and connect with their
+                audience in meaningful ways.
+              </p>
+            </div>
+          </div>
+          <div class="about__gallery">
+            <img
+              src="./src/images/what-we-do/what-we-do-1.jpg"
+              alt="Our work 1"
+              class="about__image"
+            />
+            <img
+              src="./src/images/what-we-do/what-we-do-2.jpg"
+              alt="Our work 2"
+              class="about__image"
+            />
+            <img
+              src="./src/images/what-we-do/what-we-do-3.jpg"
+              alt="Our work 3"
+              class="about__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="expertise section section--dark"
+        id="expertise"
+      >
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title section-title--light">Our expertise</h2>
+            <div class="section-header__icon">
+              <img
+                src="./src/images/sub-title/sub-title-icon-light.svg"
+                alt=""
+              />
+            </div>
+          </header>
+
+          <ul class="expertise__list">
+            <li class="card expertise__card">
+              <div class="card__icon-wrapper">
+                <img
+                  src="./src/images/features/features-item-icon-1.svg"
+                  alt="Strategy"
+                  class="card__icon"
+                />
+              </div>
+              <h3 class="card__title">Strategy & Planning</h3>
+              <p class="card__text">
+                We build solid foundations for your digital presence through
+                in-depth research and strategic planning.
+              </p>
+            </li>
+            <li class="card expertise__card">
+              <div class="card__icon-wrapper">
+                <img
+                  src="./src/images/features/features-item-icon-2.svg"
+                  alt="Design"
+                  class="card__icon"
+                />
+              </div>
+              <h3 class="card__title">UI/UX Design</h3>
+              <p class="card__text">
+                Creating intuitive and visually stunning interfaces that engage
+                users and drive conversions.
+              </p>
+            </li>
+            <li class="card expertise__card">
+              <div class="card__icon-wrapper">
+                <img
+                  src="./src/images/features/features-item-icon-3.svg"
+                  alt="Development"
+                  class="card__icon"
+                />
+              </div>
+              <h3 class="card__title">Development</h3>
+              <p class="card__text">
+                Robust and scalable code solutions using modern technologies to
+                ensure performance and reliability.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="process section"
+        id="process"
+      >
+        <div class="container">
+          <h2 class="section-title process__title">Process</h2>
+
+          <div class="process__grid">
+            <article class="process-card">
+              <span class="process-card__number">01</span>
+              <h3 class="process-card__title">Research</h3>
+              <p class="process-card__text">
+                We analyze your business and target audience.
+              </p>
+              <a
+                href="#"
+                class="process-card__link"
+              >
+                Learn more
+                <img
+                  src="./src/images/slider/arrow-right.svg"
+                  class="process-card__arrow"
+                  alt=""
+                />
+              </a>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">02</span>
+              <h3 class="process-card__title">Design</h3>
+              <p class="process-card__text">
+                We create prototypes and visual designs.
+              </p>
+              <a
+                href="#"
+                class="process-card__link"
+              >
+                Learn more
+                <img
+                  src="./src/images/slider/arrow-right.svg"
+                  class="process-card__arrow"
+                  alt=""
+                />
+              </a>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">03</span>
+              <h3 class="process-card__title">Develop</h3>
+              <p class="process-card__text">
+                We bring the design to life with clean code.
+              </p>
+              <a
+                href="#"
+                class="process-card__link"
+              >
+                Learn more
+                <img
+                  src="./src/images/slider/arrow-right.svg"
+                  class="process-card__arrow"
+                  alt=""
+                />
+              </a>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">04</span>
+              <h3 class="process-card__title">Launch</h3>
+              <p class="process-card__text">
+                We deploy and monitor your project.
+              </p>
+              <a
+                href="#"
+                class="process-card__link"
+              >
+                Learn more
+                <img
+                  src="./src/images/slider/arrow-right.svg"
+                  class="process-card__arrow"
+                  alt=""
+                />
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="testimonials section section--dark"
+        id="testimonials"
+      >
+        <div class="container">
+          <h2 class="section-title section-title--light testimonials__title">
+            Testimonials
+          </h2>
+
+          <div class="testimonials__list">
+            <figure class="testimonial-card">
+              <div class="testimonial-card__image-wrapper">
+                <img
+                  src="./src/images/testimonials/testimonial-ava-1.jpg"
+                  alt="Client 1"
+                  class="testimonial-card__image"
+                />
+                <div class="testimonial-card__overlay"></div>
+              </div>
+              <figcaption class="testimonial-card__content">
+                <p class="testimonial-card__quote">
+                  "The team at Dia transformed our vision into reality. Highly
+                  recommended!"
+                </p>
+                <cite class="testimonial-card__author">Jane Doe, CEO</cite>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial-card">
+              <div class="testimonial-card__image-wrapper">
+                <img
+                  src="./src/images/testimonials/testimonial-ava-2.jpg"
+                  alt="Client 2"
+                  class="testimonial-card__image"
+                />
+                <div class="testimonial-card__overlay"></div>
+              </div>
+              <figcaption class="testimonial-card__content">
+                <p class="testimonial-card__quote">
+                  "Professional, creative, and timely. A pleasure to work with."
+                </p>
+                <cite class="testimonial-card__author">
+                  John Smith, Founder
+                </cite>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial-card">
+              <div class="testimonial-card__image-wrapper">
+                <img
+                  src="./src/images/testimonials/testimonial-ava-3.jpg"
+                  alt="Client 3"
+                  class="testimonial-card__image"
+                />
+                <div class="testimonial-card__overlay"></div>
+              </div>
+              <figcaption class="testimonial-card__content">
+                <p class="testimonial-card__quote">
+                  "Our website traffic doubled since the redesign. Amazing
+                  work!"
+                </p>
+                <cite class="testimonial-card__author">
+                  Sarah Lee, Marketing Head
+                </cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="vision section"
+        style="background-image: url('./src/images/Shapes.png')"
+      >
+        <div class="container vision__container">
+          <h2 class="vision__title">
+            Vision,
+            <br />
+            Passion,
+            <br />
+            Results
+          </h2>
+          <a
+            href="#contact"
+            class="button vision__button"
+          >
+            Apply
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="contact section"
+        id="contact"
+      >
+        <div class="container contact__container">
+          <div class="contact__form-wrapper">
+            <h2 class="section-title contact__title">Send us a message</h2>
+
+            <form
+              action="#"
+              class="form"
+              id="contactForm"
+              novalidate
+            >
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="form__input"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <label
+                  for="name"
+                  class="form__label"
+                >
+                  Name
+                </label>
+              </div>
+
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <label
+                  for="email"
+                  class="form__label"
+                >
+                  Email
+                </label>
+              </div>
+
+              <div class="form__group">
+                <input
+                  type="tel"
+                  class="form__input"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone (+123 456 7890)"
+                  pattern="^\+?[0-9\s]+$"
+                  required
+                />
+                <label
+                  for="phone"
+                  class="form__label"
+                >
+                  Phone
+                </label>
+              </div>
+
+              <div class="form__group">
+                <textarea
+                  class="form__input form__textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Your Message (2-3 lines)"
+                  rows="3"
+                  required
+                ></textarea>
+                <label
+                  for="message"
+                  class="form__label"
+                >
+                  Message
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="button form__submit"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__info">
+            <h2 class="section-title contact__title">Contact us</h2>
+            <address class="address">
+              <p class="address__item">
+                <span class="address__label">Address:</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Estômbar,+Faro+District,+Portugal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="address__link"
+                >
+                  Estômbar, Faro District, Portugal
+                </a>
+              </p>
+              <p class="address__item">
+                <span class="address__label">Email:</span>
+                <a
+                  href="mailto:contact@dia.com"
+                  class="address__link"
+                >
+                  contact@dia.com
+                </a>
+              </p>
+              <p class="address__item">
+                <span class="address__label">Phone:</span>
+                <a
+                  href="tel:+351123456789"
+                  class="address__link"
+                >
+                  +351 123 456 789
+                </a>
+              </p>
+            </address>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <a
+          href="#"
+          class="footer__logo-link"
+        >
+          <img
+            src="./src/images/logo/dia-logo.svg"
+            alt="Dia Logo"
+            class="footer__logo"
+          />
+        </a>
+
+        <nav class="nav footer__nav">
+          <ul class="nav__list footer__list">
+            <li class="nav__item">
+              <a
+                href="#hero"
+                class="nav__link footer__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about"
+                class="nav__link footer__link"
+              >
+                About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#expertise"
+                class="nav__link footer__link"
+              >
+                Expertise
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact"
+                class="nav__link footer__link"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">© 2026 Dia. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="./src/scripts/main.js"
+    ></script>
   </body>
 </html>
