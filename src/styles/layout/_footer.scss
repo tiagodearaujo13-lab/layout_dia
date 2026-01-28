@@ -11,14 +11,12 @@
     flex-direction: column;
     gap: 40px;
     align-items: center;
-
     text-align: center;
 
     @include mq($bp-desktop) {
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
-
       text-align: left;
     }
   }
@@ -26,7 +24,6 @@
   &__logo {
     height: 30px;
     opacity: 0.8;
-
     transition: opacity 0.3s ease;
 
     &:hover {
@@ -51,7 +48,6 @@
     color: $color-black;
     text-decoration: none;
     text-transform: uppercase;
-
     transition: color 0.3s ease;
 
     &:hover {
@@ -72,7 +68,6 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-
     list-style: none;
 
     @include mq($bp-tablet) {
@@ -84,32 +79,26 @@
 
   &__link {
     position: relative;
-
     font-size: 0.9rem;
     font-weight: 500;
     color: $color-black;
     text-decoration: none;
     text-transform: uppercase;
-
     transition: color 0.3s ease;
 
     &::after {
       content: '';
-
       position: absolute;
       bottom: -4px;
       left: 0;
-
       width: 0;
       height: 2px;
-
       background-color: $color-black;
-
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: rgba($color-black, 0.7);
+      color: rgba($color-black, 0.6);
 
       &::after {
         width: 100%;
@@ -118,14 +107,8 @@
   }
 
   &__copyright {
-    margin-top: 20px;
-
     font-size: 0.8rem;
-
     color: rgba($color-black, 0.5);
-
-    @include mq($bp-desktop) {
-      margin-top: 0;
-    }
+    text-align: center;
   }
 }

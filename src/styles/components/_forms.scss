@@ -17,7 +17,6 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: $color-black;
-
     transition: color 0.3s ease;
   }
 
@@ -52,27 +51,10 @@
     // Estilos de Autocomplete
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus {
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
       transition: background-color 5000s ease-in-out 0s;
-
-      -webkit-box-shadow: 0 0 0 1000px $color-white inset;
-
-      -webkit-text-fill-color: $color-black;
-    }
-
-    &--textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-  }
-
-  &__submit {
-    align-self: flex-start;
-    width: 100%;
-    margin-top: 10px;
-
-    @include mq($bp-tablet) {
-      width: auto;
     }
   }
 }
