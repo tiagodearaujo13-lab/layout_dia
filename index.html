@@ -6,7 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Ar</title>
+    <title>Air</title>
+
     <link
       rel="icon"
       href="./src/images/logo/dia-logo.svg"
@@ -33,51 +34,51 @@
         </a>
 
         <nav class="nav header__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
+          <ul class="header__list">
+            <li class="header__item">
               <a
                 href="#hero"
-                class="nav__link"
+                class="header__link"
               >
                 Home
               </a>
             </li>
-            <li class="nav__item">
+            <li class="header__item">
               <a
                 href="#about"
-                class="nav__link"
+                class="header__link"
               >
                 Who we are
               </a>
             </li>
-            <li class="nav__item">
+            <li class="header__item">
               <a
                 href="#expertise"
-                class="nav__link"
+                class="header__link"
               >
                 Our expertise
               </a>
             </li>
-            <li class="nav__item">
+            <li class="header__item">
               <a
                 href="#process"
-                class="nav__link"
+                class="header__link"
               >
                 Process
               </a>
             </li>
-            <li class="nav__item">
+            <li class="header__item">
               <a
                 href="#testimonials"
-                class="nav__link"
+                class="header__link"
               >
                 Testimonials
               </a>
             </li>
-            <li class="nav__item">
+            <li class="header__item">
               <a
                 href="#contact"
-                class="nav__link"
+                class="header__link"
               >
                 Contact us
               </a>
@@ -463,6 +464,11 @@
               class="form"
               id="contactForm"
               novalidate
+              onsubmit="
+                alert('Message sent!');
+                this.reset();
+                return false;
+              "
             >
               <div class="form__group">
                 <input
@@ -592,6 +598,30 @@
             class="footer__logo"
           />
         </a>
+
+        <div class="footer__socials">
+          <a
+            href="#"
+            target="_blank"
+            class="footer__social-link"
+          >
+            Instagram
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="footer__social-link"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="footer__social-link"
+          >
+            Facebook
+          </a>
+        </div>
 
         <nav class="nav footer__nav">
           <ul class="nav__list footer__list">

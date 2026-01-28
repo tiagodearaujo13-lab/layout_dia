@@ -1,5 +1,5 @@
-@import '../utils/vars';
-@import '../utils/mixins';
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
 
 .footer {
   margin-top: auto;
@@ -12,16 +12,59 @@
     gap: 40px;
     align-items: center;
 
+    text-align: center;
+
     @include mq($bp-desktop) {
       flex-direction: row;
       align-items: flex-end;
       justify-content: space-between;
+
+      text-align: left;
     }
   }
 
   &__logo {
     height: 30px;
     opacity: 0.8;
+
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+
+    @include mq($bp-desktop) {
+      margin: 0;
+    }
+  }
+
+  &__social-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $color-black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: rgba($color-black, 0.6);
+    }
+  }
+
+  &__nav {
+    width: 100%;
+
+    @include mq($bp-desktop) {
+      width: auto;
+    }
   }
 
   &__list {
@@ -35,6 +78,7 @@
     @include mq($bp-tablet) {
       flex-direction: row;
       gap: 40px;
+      justify-content: center;
     }
   }
 
@@ -47,6 +91,8 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    transition: color 0.3s ease;
+
     &::after {
       content: '';
 
@@ -55,20 +101,31 @@
       left: 0;
 
       width: 0;
-      height: 1px;
+      height: 2px;
 
       background-color: $color-black;
 
-      @include transition(width, 0.3s, ease);
+      transition: width 0.3s ease;
     }
 
-    &:hover::after {
-      width: 100%;
+    &:hover {
+      color: rgba($color-black, 0.7);
+
+      &::after {
+        width: 100%;
+      }
     }
   }
 
   &__copyright {
+    margin-top: 20px;
+
     font-size: 0.8rem;
+
     color: rgba($color-black, 0.5);
+
+    @include mq($bp-desktop) {
+      margin-top: 0;
+    }
   }
 }
