@@ -1,36 +1,115 @@
-@mixin mq($width, $type: min) {
-  @if $type == max {
-    @media only screen and (max-width: $width) {
-      @content;
-    }
-  } @else {
-    @media only screen and (min-width: $width) {
-      @content;
-    }
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+
+  &:hover {
+    #{$_property}: $_toValue;
   }
 }
 
-@mixin abs-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin poppins-600 {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
 }
 
-@mixin transition($prop: all, $time: 0.3s, $ease: ease-in-out) {
-  transition: $prop $time $ease;
+@mixin poppins-700 {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
 }
 
-@mixin visually-hidden {
-  position: absolute;
+@mixin open-400 {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+}
 
-  overflow: hidden;
+@mixin open-600 {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+}
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+@mixin centralize {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  justify-self: center;
+}
 
-  clip: rect(0, 0, 0, 0);
+@mixin button-blue {
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  line-height: 100%;
+  color: #fff;
+
+  background-color: #2060f6;
+}
+
+@mixin on-small-desktop {
+  @media (min-width: $small-desk-width) {
+    @content;
+  }
+}
+
+@mixin on-tabblet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin on-large-desktop {
+  @media (min-width: $large-desktop-width) {
+    @content;
+  }
+}
+
+@mixin on-ultra-wide {
+  @media (min-width: $ultra-wide-width) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 2;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+
+  @include on-tabblet {
+    --columns: 6;
+
+    column-gap: 24px;
+  }
+
+  @include on-small-desktop {
+    --columns: 12;
+  }
+}
+
+@mixin padding-page {
+  padding-inline: 20px;
+
+  @include on-tabblet {
+    padding-inline: 40px;
+  }
+
+  @include on-small-desktop {
+    padding-inline: 54px;
+  }
+
+  @include on-large-desktop {
+    padding-inline: 228px;
+  }
+
+  @include on-ultra-wide {
+    padding-inline: 708px;
+  }
+}
+
+@mixin link-white {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }

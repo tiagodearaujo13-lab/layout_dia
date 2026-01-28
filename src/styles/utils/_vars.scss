@@ -1,23 +1,9 @@
-// Cores do Projeto
-$color-black: #000;
-$color-white: #fff;
-$color-gray-light: #f4f4f4;
-$color-gray-dark: #1a1a1a;
-$color-accent: #333;
+$c-gray: #eee;
 
-// Tipografia
-$font-primary: 'Roboto', sans-serif;
-$font-size-base: 16px;
+// width
 
-// Breakpoints
-$bp-mobile: 320px;
-$bp-tablet: 640px;
-$bp-desktop-sm: 1024px;
-$bp-desktop: 1280px;
-$bp-large: 1600px;
-$bp-huge: 2560px;
-
-// Layout
-$container-max-width: 1600px;
-$gutter: 20px;
-$header-height: 80px;
+$mobile-width: 320px;
+$tablet-width: 640px;
+$small-desk-width: 1024px;
+$large-desktop-width: 1600px;
+$ultra-wide-width: 2560px;
